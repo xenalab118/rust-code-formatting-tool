@@ -15,6 +15,32 @@ pub struct Foo {
 
 struct Bar;
 
+struct NewType(Type, OtherType);
+
+struct NewInt<T: Copy>(pub i32, SomeType /* inline comment */, T /* sup */);
+
+struct Qux<'a,
+           N: Clone + 'a,
+           E: Clone + 'a,
+           G: Labeller<'a, N, E> + GraphWalk<'a, N, E>,
+           W: Write + Copy>
+(
+    AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA, // Comment
+    BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB,
+    #[AnAttr]
+    // Comment
+    /// Testdoc
+    G,
+    pub W,
+);
+
+struct Tuple(
+    // Comment 1
+    AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,
+    // Comment 2
+    BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB,
+);
+
 // With a where clause and generics.
 pub struct Foo<'a, Y: Baz>
     where X: Whatever
@@ -36,3 +62,6 @@ struct Baz {
     // Comment C
     c: C,
 }
+
+// Will this be a one-liner?
+struct Tuple(A /* Comment */, B);
