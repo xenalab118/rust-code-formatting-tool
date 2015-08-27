@@ -29,4 +29,14 @@ impl Bar {
     #[another_attribute]
     fn f3(self) -> Dog {
     }
+
+    /// Blah blah bing.
+    #[attrib1]
+    /// Blah blah bing.
+    #[attrib2]
+    // Another comment that needs rewrite because it's tooooooooooooooooooooooooooooooo
+    // loooooooooooong.
+    /// Blah blah bing.
+    fn f4(self) -> Cat {
+    }
 }
