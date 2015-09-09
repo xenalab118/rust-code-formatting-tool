@@ -1,10 +1,10 @@
 // Test chain formatting.
 
 fn main() {
-    let a = b.c
-             .d
-             .1
-             .foo(|x| x + 1);
+    // Don't put chains on a single list if it wasn't so in source.
+    let a = b .c
+    .d.1
+                .foo(|x| x + 1);
 
     bbbbbbbbbbbbbbbbbbb.ccccccccccccccccccccccccccccccccccccc
                        .ddddddddddddddddddddddddddd();
@@ -25,7 +25,6 @@ fn main() {
                                         {
                                             SCRIPT_TASK_ROOT
                                             .with(|root| {
-                                                                // Another case of write_list failing us.
                                                 *root.borrow_mut()  =   Some(&script_task);
                                             });
                                         });                                        

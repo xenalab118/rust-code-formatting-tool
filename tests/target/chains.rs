@@ -1,7 +1,11 @@
 // Test chain formatting.
 
 fn main() {
-    let a = b.c.d.1.foo(|x| x + 1);
+    // Don't put chains on a single list if it wasn't so in source.
+    let a = b.c
+             .d
+             .1
+             .foo(|x| x + 1);
 
     bbbbbbbbbbbbbbbbbbb.ccccccccccccccccccccccccccccccccccccc.ddddddddddddddddddddddddddd();
 
@@ -10,27 +14,25 @@ fn main() {
                        .eeeeeeee();
 
     x().y(|| {
-           match cond() {
-               true => (),
-               false => (),
-           }
-       });
+        match cond() {
+            true => (),
+            false => (),
+        }
+    });
 
-    loong_func()
-        .quux(move || {
-            if true {
-                1
-            } else {
-                2
-            }
-        });
+    loong_func().quux(move || {
+        if true {
+            1
+        } else {
+            2
+        }
+    });
 
     fffffffffffffffffffffffffffffffffff(a,
                                         {
                                             SCRIPT_TASK_ROOT.with(|root| {
-                                                                // Another case of write_list failing us.
-                                                                *root.borrow_mut() = Some(&script_task);
-                                                            });
+                                                *root.borrow_mut() = Some(&script_task);
+                                            });
                                         });
 
     let suuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuum = xxxxxxx.map(|x| x + 5)
