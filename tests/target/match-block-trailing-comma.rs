@@ -8,6 +8,9 @@ fn foo() {
             "line1";
             "line2"
         },
-        b => "bar",
+        b => {
+            (aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,
+             bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb)
+        },
     }
 }
