@@ -1,4 +1,4 @@
-// rustfmt-fn_args_layout: Block
+// rustfmt-fn_args_layout: BlockAlways
 // rustfmt-where_indent: Inherit
 // rustfmt-fn_brace_style: PreferSameLine
 // Test different indents.
