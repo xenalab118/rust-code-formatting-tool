@@ -10,3 +10,9 @@ trait Foo
 fn foo(
 );
 }
+
+impl LateLintPass for UsedUnderscoreBinding {
+    #[cfg_attr(rustfmt, rustfmt_skip)]
+    fn check_expr() { // comment
+    }
+}
