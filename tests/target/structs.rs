@@ -1,6 +1,5 @@
 // rustfmt-normalize_comments: true
 // rustfmt-wrap_comments: true
-// rustfmt-error_on_line_overflow: false
 
 /// A Doc comment
 #[AnAttribute]
@@ -132,13 +131,13 @@ struct Palette {
 // when the field had attributes
 struct FieldsWithAttributes {
     // Pre Comment
-    #[rustfmt_skip] pub host:String, /* Post comment BBBBBBBBBBBBBB BBBBBBBBBBBBBBBB BBBBBBBBBBBBBBBB
-                                      * BBBBBBBBBBBBBBBBB BBBBBBBBBBB */
+    #[rustfmt_skip] pub host:String, /* Post comment BBBBBBBBBBBBBB BBBBBBBBBBBBBBBB
+                                      * BBBBBBBBBBBBBBBB BBBBBBBBBBBBBBBBB BBBBBBBBBBB */
     // Another pre comment
     #[attr1]
     #[attr2]
-    pub id: usize, /* CCCCCCCCCCCCCCCCCCC CCCCCCCCCCCCCCCCCCC CCCCCCCCCCCCCCCC CCCCCCCCCCCCCCCCCC
-                    * CCCCCCCCCCCCCC CCCCCCCCCCCC */
+    pub id: usize, /* CCCCCCCCCCCCCCCCCCC CCCCCCCCCCCCCCCCCCC CCCCCCCCCCCCCCCC
+                    * CCCCCCCCCCCCCCCCCC CCCCCCCCCCCCCC CCCCCCCCCCCC */
 }
 
 struct Deep {
